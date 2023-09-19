@@ -293,7 +293,8 @@ function GiftedChat<TMessage extends IMessage = IMessage>(
     })
 
     if (inverted === false && messages?.length) {
-      setTimeout(() => scrollToBottom(false), 200)
+      // @see M3142 https://github.com/LarkTechnologies/meadowlarkRN/pull/2550#pullrequestreview-1629474779
+      setTimeout(() => scrollToBottom(), 300)
     }
 
     return () => {
